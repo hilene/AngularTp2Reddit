@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Article } from '../article/article.model';
 
 @Component({
   selector: 'app-formulaire',
@@ -6,12 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./formulaire.component.css']
 })
 export class FormulaireComponent implements OnInit {
+  articles: Article[];
 
   constructor() { }
-  addArticle(title: HTMLInputElement, link: HTMLInputElement){
-    console.log(`Adding article title: ${title.value} and link: ${link.value}`);
-    return false;
-  }
+
+
   ngOnInit() {
   }
 
