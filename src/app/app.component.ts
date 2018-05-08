@@ -10,8 +10,8 @@ import { ArticleService } from './article.service';
    providers: [ArticleService]
 })
 export class AppComponent {
-  title = 'app';
   article: Article[];
+  colorFromChild: string;
 
   constructor(service: ArticleService){
     this.article = service.getArticles();
@@ -31,5 +31,11 @@ export class AppComponent {
 
   sortedArticles(): Article[] {
     return this.article.sort((a: Article, b: Article) => b.votes - a.votes);
+  }
+
+  onColor(color) {
+    console.log(`new color ${color}`);
+    this.colorFromChild = color;
+    console.log('la nouvelle couleur est' +color);
   }
 }

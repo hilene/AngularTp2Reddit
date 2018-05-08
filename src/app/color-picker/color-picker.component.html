@@ -1,0 +1,9 @@
+<p>
+  color-picker works!
+</p>
+<div class="color-title" [ngStyle]="{'color':color}">Pick a Color</div>
+<div class="color-picker">
+<div class="color-sample-blue" (click)="choose('#0000ff')">blue</div>
+<div class="color-sample-red" (click)="choose('#ff0000')">red</div>
+
+</div>
